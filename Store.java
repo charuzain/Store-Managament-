@@ -11,10 +11,10 @@ public class Store {
     itemsInStore.add(item1);
     itemsInStore.add(item2);
     itemsInStore.add(item3);
+    System.out.println("List of all the items in store is as: ");
      for(int i = 0 ; i <itemsInStore.size();i++){
-            System.out.println(itemsInStore.get(i).productName);
+            System.out.println("--" +(i + 1)+ "-" + itemsInStore.get(i).quantity +  " " + itemsInStore.get(i).productName + " at price " + itemsInStore.get(i).price + " each");
         }
 
-        System.out.println(itemsInStore);
   }
 }
