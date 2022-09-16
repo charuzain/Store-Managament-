@@ -14,7 +14,7 @@ public class Store {
     itemsInStore.add(item1);
     itemsInStore.add(item2);
     itemsInStore.add(item3);
-    
+
     System.out.println("List of all the items in store is as: ");
     System.out.println("====================================");
     for (int i = 0; i < itemsInStore.size(); i++) {
@@ -29,6 +29,19 @@ public class Store {
     int productId = sc.nextInt();
 
     System.out.println("How many " + itemsInStore.get(productId - 1).productName + " would you like to buy ?");
+
+    int orderQuantity = sc.nextInt();
+
+    if (orderQuantity <= itemsInStore.get(productId - 1).quantity) {
+      int quantityLeft = itemsInStore.get(productId - 1).quantity - orderQuantity;
+      itemsInStore.get(productId - 1).quantity = quantityLeft;
+      double totalCost = itemsInStore.get(productId - 1).price * orderQuantity;
+      System.out.println("Your total cost is " + totalCost + " $");
+    }
+    else {
+      System.out.println("Not sufficient inventory");
+
+    }
     
 
 
