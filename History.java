@@ -1,9 +1,8 @@
-import java.util.Date;
 
 public class History extends StoreItem {
-  Date puchaseTime;
+  String puchaseTime;
 
-  public History(String productName, int quantity, double price, Date purchaseTime) {
+  public History(String productName, int quantity, double price, String purchaseTime) {
     super(productName, quantity, price);
     this.puchaseTime = purchaseTime;
   }
